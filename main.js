@@ -227,7 +227,8 @@ function mostrarPregunta() {
     const label = document.createElement('label');
     label.className = 'form-check-label fw-semibold';
     label.setAttribute('for', input.id);
-    label.innerHTML = `<span class='badge bg-primary me-2'>${letras[idx]})</span> <span>${op}</span>`;
+    // Mostrar solo la letra como badge, y el texto de la opción sin prefijo
+    label.innerHTML = `<span class='badge bg-primary me-2'>${letras[idx]})</span> <span>${op.replace(/^\s*[a-dA-D]\)\s*/, '')}</span>`;
     div.appendChild(input);
     div.appendChild(label);
     form.appendChild(div);
