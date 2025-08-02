@@ -1,73 +1,48 @@
-# Estudiame
 
-Estudiame es una aplicación web simple y moderna para practicar preguntas de opción múltiple o simple, ideal para el estudio personal de exámenes o repasos.
 
-## Características principales
-- **Carga de preguntas** desde un archivo `.txt` con formato personalizado.
-- **Soporte multilenguaje**: Español, Inglés y Francés. Detección automática por URL o idioma del navegador.
-- **Interfaz moderna y responsiva** usando Bootstrap 5 y Animate.css.
-- **Timer global** para el examen, con resumen automático al finalizar el tiempo.
-- **Navegación fácil** entre preguntas, con botones de siguiente, anterior y mostrar respuesta.
-- **Barra de progreso visual** y resumen de resultados al finalizar.
-- **Sin dependencias de backend**: solo HTML, CSS y JS puro. ¡Abre el `index.html` en tu navegador y listo!
+# 📚 StudyMe
 
-## Formato del archivo de preguntas
+StudyMe is a simple and modern web app to practice single or multiple choice questions, perfect for personal exam prep or review. Learn by playing! 🎓✨
 
-# 📚 Estudiame
+> **Note:** Multilanguage support (Spanish, English, French) will be added soon. For now, the app is only available in English.
 
-Estudiame es una aplicación web simple y moderna para practicar preguntas de opción múltiple o simple, ideal para el estudio personal de exámenes o repasos. ¡Aprende jugando! 🎓✨
+## ✨ Main Features
+- 📄 **Load questions** from a custom `.txt` file.
+- 💻 **Modern and responsive interface** using Bootstrap 5 and Animate.css.
+- ⏰ **Global timer** for the exam, with automatic summary when time is up.
+- 🧭 **Easy navigation** between questions, with previous, next, and show answer buttons.
+- 📊 **Visual progress bar** and results summary at the end.
+- 🚀 **No backend dependencies**: just HTML, CSS, and pure JS. Use it instantly online!
 
-## ✨ Características principales
-- 📄 **Carga de preguntas** desde un archivo `.txt` con formato personalizado.
-- 🌐 **Soporte multilenguaje**: Español, Inglés y Francés. Detección automática por URL o idioma del navegador.
-- 💻 **Interfaz moderna y responsiva** usando Bootstrap 5 y Animate.css.
-- ⏰ **Timer global** para el examen, con resumen automático al finalizar el tiempo.
-- 🧭 **Navegación fácil** entre preguntas, con botones de siguiente, anterior y mostrar respuesta.
-- 📊 **Barra de progreso visual** y resumen de resultados al finalizar.
-- 🚀 **Sin dependencias de backend**: solo HTML, CSS y JS puro. ¡Abre el `index.html` en tu navegador y listo!
-
-## 📝 Formato del archivo de preguntas
-Cada línea debe tener:
+## 📝 Question file format
+Each line must have:
 
 ```
-Pregunta|a)|b)|c)|d)|respuesta_correcta
+Question|a) option1|b) option2|c) option3|d) option4|correct_letter
 ```
-- 📌 Ejemplo:
+- 📌 Example:
 ```
-¿Cuál es la capital de Francia?|Madrid|París|Roma|Berlín|b
-¿2+2=?|3|4|5|6|b
+What is the capital of France?|a) Madrid|b) London|c) Paris|d) Berlin|c
+How much is 2 + 2?|a) 3|b) 4|c) 5|d) 22|b
 ```
-- ✅ Para respuestas múltiples, separa con coma: `a,c`
+- ✅ For multiple correct answers, separate with comma: `a,c`
 
-## 🚦 Cómo usar
-1. 📥 Descarga o clona este repositorio.
-2. 🖥️ Abre `index.html` en tu navegador (no requiere servidor).
-3. 📂 Sube tu archivo de preguntas `.txt`.
-4. ⏳ Define el tiempo y porcentaje de aprobación.
-5. 🏁 ¡Comienza a estudiar!
+## 🚦 How to use
+1. 🌐 Go to: [https://studyme-seven.vercel.app/](https://studyme-seven.vercel.app/)
+2. 📂 Upload your `.txt` questions file.
+3. ⏳ Set exam duration and passing score.
+4. 🏁 Start studying!
 
-## 🌍 Cambiar idioma
-- 🏷️ Por URL: agrega `/es`, `/en` o `/fr` a la ruta (requiere estructura de carpetas o servidor local).
-- 🌐 Por navegador: cambia el idioma principal en la configuración de tu navegador.
+## 🗂️ Project structure
+- `index.html` — Main interface
+- `main.js` — App logic
+- `languages.js` — (Future) Translations
+- `style.css` — Custom styles
 
-> ⚡ **Nota:**
-> La detección por URL tiene prioridad sobre el idioma del navegador. Si la ruta contiene `/fr`, siempre mostrará francés, aunque tu navegador esté en español o inglés.
-
-## 🎨 Personalización
-- 📝 Edita `languages.js` para agregar o modificar idiomas.
-- 🎨 Cambia estilos en `style.css` o usa tus propios fondos.
-
-## 🗂️ Estructura del proyecto
-- `index.html` — Interfaz principal
-- `main.js` — Lógica de la app
-- `languages.js` — Traducciones
-- `style.css` — Estilos personalizados
-- `assets/` — Recursos opcionales (imágenes, ejemplos)
-
-## 👨‍💻 Créditos
-- Hecho con ❤️ para el estudio personal.
-- Basado en Bootstrap 5 y Animate.css.
+## 👨‍💻 Credits
+- Made with ❤️ for personal study.
+- Powered by Bootstrap 5 and Animate.css.
 
 ---
 
-🙌 ¡Contribuciones y sugerencias son bienvenidas!
+🙌 Contributions and suggestions are welcome!
