@@ -1,0 +1,13 @@
+# Archivos y carpetas ignorados por git
+.DS_Store
+node_modules/
+*.log
+*.tmp
+*.bak
+assets/*.bak
+assets/*.tmp
+.env
+.idea/
+.vscode/
+/dist/
+/build/

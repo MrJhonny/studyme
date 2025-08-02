@@ -1,0 +1,91 @@
+  <!-- Modal de tiempo agotado -->
+  <div class="modal fade" id="timeoutModal" tabindex="-1" aria-labelledby="timeoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title" id="timeoutModalLabel">¡Tiempo agotado!</h5>
+        </div>
+        <div class="modal-body">
+          El tiempo del examen ha finalizado. El total de tu examen ha sido evaluado.<br>
+          Todas las respuestas sin contestar se consideran incorrectas.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estudiame - Preguntas y Respuestas</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+  <header class="text-white py-3">
+    <h1 class="text-center fw-bold">Estudiame</h1>
+  </header>
+  <main class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container py-4">
+      <section id="setup-section" class="row justify-content-center">
+        <form id="setup-form" class="col-12 col-md-8 col-lg-6 bg-white rounded-5 shadow-lg p-4 border border-2 border-primary-subtle animate__animated animate__fadeInDown">
+          <div class="mb-3">
+            <label for="file-input" class="form-label fw-semibold">Archivo de preguntas (.txt):</label>
+            <input type="file" class="form-control" id="file-input" accept=".txt" required>
+          </div>
+          <div class="mb-3">
+            <label for="duration-input" class="form-label fw-semibold">Duración del examen (minutos):</label>
+            <input type="number" class="form-control" id="duration-input" min="1" max="999" value="30" required>
+          </div>
+          <div class="mb-4">
+            <label for="pass-input" class="form-label fw-semibold">Porcentaje de aprobación (%):</label>
+            <input type="number" class="form-control" id="pass-input" min="1" max="100" value="60" required>
+          </div>
+          <button type="submit" id="start-btn" class="btn btn-success w-100 fw-bold py-2">Iniciar examen</button>
+        </form>
+      </section>
+      <section id="quiz-section" style="display:none;">
+        <div class="row justify-content-center align-items-center g-4">
+          <div class="col-12 col-md-10 col-lg-8">
+            <div class="card shadow-lg border-0 mb-4 rounded-5 animate__animated animate__fadeInUp">
+              <div class="card-body p-4">
+                <div id="progress-container" class="mb-4">
+                  <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-2 gap-2">
+                    <span id="progress-text" class="fw-semibold text-primary fs-5">Progreso: 0/0</span>
+                    <span id="timer" class="badge bg-warning text-dark fs-5 px-3 py-2 shadow-sm">⏰ <span id="time-left">00:00</span></span>
+                  </div>
+                  <div class="progress rounded-pill" style="height: 16px;">
+                    <div id="progress-fill" class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%"></div>
+                  </div>
+                </div>
+                <div id="question-container" class="mb-4">
+                  <div id="question"></div>
+                  <div id="answer" class="mt-3" style="display:none;"></div>
+                </div>
+                <div id="controls" class="d-flex flex-wrap gap-3 justify-content-center mt-3">
+                  <button id="prev-btn" class="btn btn-outline-primary px-4 rounded-pill shadow-sm">Anterior</button>
+                  <button id="show-answer-btn" class="btn btn-warning px-4 rounded-pill shadow-sm">Mostrar respuesta</button>
+                  <button id="next-btn" class="btn btn-primary px-4 rounded-pill shadow-sm">Siguiente</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="./languages.js"></script>
+  <script src="./main.js"></script>
+  <!-- Bootstrap JS (opcional, para componentes interactivos) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <footer class="text-center text-secondary small py-3" style="background:transparent; border-top:none;">
+    Estudiame &copy; 2025 &mdash; Hecho con ❤️ para el estudio personal
+  </footer>
+</body>
+</html>
